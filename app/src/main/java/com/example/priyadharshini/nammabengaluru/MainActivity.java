@@ -15,7 +15,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     // Array of strings...
-    String[] menuArray = {"Tour Bengaluru", "Find Kannada Translation", "Hotels", "Whether", "Restaurants", "Map"};
+    String[] menuArray = {"Tour Bengaluru", "Find Kannada Translation", "Hotels", "Weather", "Restaurants", "Map"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void performAction(View view) {
         TextView menuText = (TextView) view.findViewById(R.id.menu_item);
-        Intent myIntent = new Intent(MainActivity.this, PlacesToVisit.class);
-        this.startActivity(myIntent);
+
+        if(menuText.getText().equals("Tour Bengaluru")) {
+            Intent placesToVisit = new Intent(MainActivity.this, PlacesToVisit.class);
+            this.startActivity(placesToVisit);
+        } else if(menuText.getText().equals("Weather")) {
+            Intent weather = new Intent(MainActivity.this, Weather.class);
+            this.startActivity(weather);
+        }
     }
 }
