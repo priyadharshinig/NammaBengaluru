@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlacesToVisit" />
-        <activity android:name=".Weather"></activity>
+        <activity android:name=".Weather" />
+        <activity android:name=".Restaurants"></activity>
     </application>
 
 </manifest>

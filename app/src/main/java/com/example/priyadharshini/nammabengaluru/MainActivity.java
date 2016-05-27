@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -14,7 +15,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Array of strings...
     String[] menuArray = {"Tour Bengaluru", "Find Kannada Translation", "Hotels", "Weather", "Restaurants", "Map"};
 
     @Override
@@ -23,20 +23,35 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.menu, menuArray);
-
-        ListView listView = (ListView) findViewById(R.id.menu_list);
+        final ListView listView = (ListView) findViewById(R.id.menu_list);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+                String o = (String)listView.getItemAtPosition(position);
+                performAction(o);
+            }
+        });
+
     }
+    public void performAction(String item) {
 
-    public void performAction(View view) {
-        TextView menuText = (TextView) view.findViewById(R.id.menu_item);
-
-        if(menuText.getText().equals("Tour Bengaluru")) {
-            Intent placesToVisit = new Intent(MainActivity.this, PlacesToVisit.class);
-            this.startActivity(placesToVisit);
-        } else if(menuText.getText().equals("Weather")) {
-            Intent weather = new Intent(MainActivity.this, Weather.class);
-            this.startActivity(weather);
+        switch (item) {
+            case "Tour Bengaluru" :
+                Intent placesToVisit = new Intent(MainActivity.this, PlacesToVisit.class);
+                this.startActivity(placesToVisit);
+                break;
+            case "Weather" :
+                Intent weather = new Intent(MainActivity.this, Weather.class);
+                this.startActivity(weather);
+                break;
+            case "Restaurants" :
+                Intent restaurant = new Intent(MainActivity.this, Restaurants.class);
+                this.startActivity(restaurant);
+                break;
+            default:
+                break;
         }
     }
 }
