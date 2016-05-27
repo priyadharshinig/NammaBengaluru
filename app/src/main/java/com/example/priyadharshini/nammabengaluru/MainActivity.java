@@ -15,7 +15,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] menuArray = {"Tour Bengaluru", "Find Kannada Translation", "Hotels", "Weather", "Restaurants", "Map"};
+    String[] menuArray = {"Places To Visit", "Hotels", "Weather", "Restaurants", "Map"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public void performAction(String item) {
 
         switch (item) {
-            case "Tour Bengaluru" :
+            case "Places To Visit" :
                 Intent placesToVisit = new Intent(MainActivity.this, PlacesToVisit.class);
                 this.startActivity(placesToVisit);
                 break;
@@ -49,6 +49,16 @@ public class MainActivity extends AppCompatActivity {
             case "Restaurants" :
                 Intent restaurant = new Intent(MainActivity.this, Restaurants.class);
                 this.startActivity(restaurant);
+                break;
+            case "Map" :
+                Intent map = new Intent(MainActivity.this, MapsActivity.class);
+                Bundle b = new Bundle();
+                b.putDouble("lat", 12.9538477);
+                b.putDouble("longitude", 77.3507382);
+                b.putString("location", "Bangalore");
+                map.putExtras(b);
+                this.startActivity(map);
+
                 break;
             default:
                 break;

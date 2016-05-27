@@ -31,6 +31,17 @@
                 android:layout_width="fill_parent"
                 android:textColor="#0D47A1"
                 android:gravity="center"/>
+
+            <TextView
+                android:text="Locate on Map"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#FCE4EC"
+                android:gravity="right"
+                android:id="@+id/nandi_hills_locate"
+                android:onClick="locate"/>
+
         </FrameLayout>
 
     </android.support.v7.widget.CardView>
@@ -48,6 +59,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/woder_la"/>
+
+            <TextView
+                android:text="Locate on Map"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#E91E63"
+                android:gravity="right"
+                android:id="@+id/wonder_la_locate"
+                android:onClick="locate"/>
 
         </FrameLayout>
 
