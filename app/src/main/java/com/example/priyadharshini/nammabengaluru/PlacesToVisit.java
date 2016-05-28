@@ -23,12 +23,12 @@ public class PlacesToVisit extends AppCompatActivity {
         switch (id) {
             case "nandi_hills_locate":
                 //todo: make these constants in string.xml
-                b.putDouble("lat", 13.3701516);
-                b.putDouble("longitude", 77.6484354); //Your id
+                b.putDouble("latitude", 13.3701516);
+                b.putDouble("longitude", 77.6484354);
                 b.putString("location", "Nandi Hills");
                 break;
             case "wonder_la_locate":
-                b.putDouble("lat", 12.9905789);
+                b.putDouble("latitude", 12.9905789);
                 b.putDouble("longitude", 77.3193761);
                 b.putString("location", "Wonder La");
                 break;
