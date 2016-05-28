@@ -1,4 +1,4 @@
-package com.example.priyadharshini.nammabengaluru;
+package com.example.priyadharshini.nammabengaluru.helper;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

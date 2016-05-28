@@ -12,7 +12,7 @@ import android.widget.ListView;
 public class Restaurants extends AppCompatActivity {
 
     //todo: make these constants in string array
-    String[] menuArray = {"Olive Beach", "Leela Palace", "Park Plaza"};
+    String[] menuArray = getResources().getStringArray(R.array.restaurantsArray);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

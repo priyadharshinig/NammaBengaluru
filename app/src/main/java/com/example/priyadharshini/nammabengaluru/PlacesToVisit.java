@@ -25,36 +25,18 @@ public class PlacesToVisit extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_places_to_visit);
 
-        /**
-         * Get the reference of the {@link RecyclerView } inside {@link R.layout.activity_recycler_view}
-         */
         RecyclerView contactsRecyclerView = (RecyclerView) findViewById(R.id.list_view);
 
-
         if (contactsRecyclerView != null) {
-
-            // create a list of contacts that needs to be displayed
-
             List<PlaceInfo> places = getPlaces();
-
-            /**
-             * Create an {@link Adapter} to control {@link contactsRecyclerView}
-             */
             PlacesToVisitAdapter contactsAdapter = new PlacesToVisitAdapter(places);
-
-            /**
-             * Set the {@link Adapter} to {@link contactsRecyclerView}
-             */
             contactsRecyclerView.setAdapter(contactsAdapter);
-
             contactsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         }
-
 
     }
 
     public void locate(View view) {
-
 
         Button tv = (Button) view;
         Double latitude = (Double) tv.getTag(R.string.latitude);
