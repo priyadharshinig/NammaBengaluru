@@ -1,6 +1,7 @@
 package com.example.priyadharshini.nammabengaluru;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -37,7 +38,7 @@ public class OpenWeatherMapHelper extends AsyncTask<String, String, String> {
                 throw new IOException(statusLine.getReasonPhrase());
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e("Exception occured. ", e.getMessage());
         }
         return responseString;
     }
