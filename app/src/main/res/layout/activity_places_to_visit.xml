@@ -33,14 +33,8 @@
                 android:gravity="center"/>
 
             <TextView
-                android:text="Locate on Map"
-                android:textSize="18sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textColor="#FCE4EC"
-                android:gravity="right"
                 android:id="@+id/nandi_hills_locate"
-                android:onClick="locate"/>
+                style="@style/locate_on_map"/>
 
         </FrameLayout>
 
@@ -61,14 +55,8 @@
                 android:src="@drawable/woder_la"/>
 
             <TextView
-                android:text="Locate on Map"
-                android:textSize="18sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textColor="#E91E63"
-                android:gravity="right"
                 android:id="@+id/wonder_la_locate"
-                android:onClick="locate"/>
+                style="@style/locate_on_map"/>
 
         </FrameLayout>
 
