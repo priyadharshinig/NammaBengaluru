@@ -20,6 +20,8 @@ import java.util.concurrent.ExecutionException;
 
 public class Weather extends AppCompatActivity {
 
+    final String DEGREE  = "\u00b0";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +37,11 @@ public class Weather extends AppCompatActivity {
             String icon = weatherObj.getString("icon");
             String description = weatherObj.getString("description");
             TextView menuText = (TextView) findViewById(R.id.weather);
-            String tempString = "Current temperature in Bangalore is: "+ temperature+"degree celcius";
+            String tempString = temperature + " " +DEGREE+"C";
             menuText.setText(tempString);
 
             TextView desc = (TextView) findViewById(R.id.description);
-            menuText.setText(description);
+            desc.setText(description);
 
 
                 ImageView i = (ImageView)findViewById(R.id.iconImage);

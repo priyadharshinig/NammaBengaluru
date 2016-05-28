@@ -9,22 +9,32 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.example.priyadharshini.nammabengaluru.Weather">
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/iconImage" />
 
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:id="@+id/iconImage" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:id="@+id/weather"/>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:id="@+id/description"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/weather"/>
-
 
 </LinearLayout>
