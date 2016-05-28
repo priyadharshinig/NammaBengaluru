@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * main menu in an array
      */
-    String[] menuArray = {"Places To Visit", "Hotels", "Weather", "Restaurants", "Map"};
+    String[] menuArray = {"Places To Visit", "Weather",  "Map", "Restaurants", "Hotels"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

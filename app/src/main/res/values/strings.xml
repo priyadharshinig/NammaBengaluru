@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">NammaBengaluru</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="location">location</string>
 
 
     <string-array name="languages">
