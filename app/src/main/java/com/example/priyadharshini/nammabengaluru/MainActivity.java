@@ -57,12 +57,15 @@ public class MainActivity extends AppCompatActivity {
             case "Map":
                 Intent map = new Intent(MainActivity.this, MapsActivity.class);
                 Bundle b = new Bundle();
-                b.putDouble("lat", 12.9538477);
+                b.putDouble("latitude", 12.9538477);
                 b.putDouble("longitude", 77.3507382);
                 b.putString("location", "Bangalore");
                 map.putExtras(b);
                 this.startActivity(map);
-
+                break;
+            case "Hotels":
+                Intent hotel = new Intent(MainActivity.this, Hotel.class);
+                this.startActivity(hotel);
                 break;
             default:
                 break;
