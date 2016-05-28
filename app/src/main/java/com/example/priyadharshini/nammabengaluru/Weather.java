@@ -8,9 +8,6 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.priyadharshini.nammabengaluru.helper.OpenWeatherMapHelper;
-import com.example.priyadharshini.nammabengaluru.helper.WeatherImageHelper;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 

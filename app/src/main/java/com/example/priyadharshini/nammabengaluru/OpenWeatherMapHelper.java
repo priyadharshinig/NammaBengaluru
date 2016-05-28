@@ -1,4 +1,4 @@
-package com.example.priyadharshini.nammabengaluru.helper;
+package com.example.priyadharshini.nammabengaluru;
 
 import android.os.AsyncTask;
 import android.util.Log;

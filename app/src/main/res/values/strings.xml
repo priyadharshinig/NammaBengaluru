@@ -10,19 +10,5 @@
         <item>Kannada</item>
     </string-array>
 
-    <string-array name="menuArray">
-        <item>Places To Visit</item>
-        <item>Weather</item>
-        <item>Map</item>
-        <item>Restaurants</item>
-        <item>Hotels</item>
-    </string-array>
-
-    <string-array name="restaurantsArray">
-        <item>Olive Beach</item>
-        <item>Leela Palace</item>
-        <item>Park Plaza</item>
-    </string-array>
-
 
 </resources>
