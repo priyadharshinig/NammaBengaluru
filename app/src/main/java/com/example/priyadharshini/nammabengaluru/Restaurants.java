@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class Restaurants extends AppCompatActivity {
 
+    //todo: make these constants in string array
     String[] menuArray = {"Ibis", "Novotel", "Park Plaza"};
 
     @Override

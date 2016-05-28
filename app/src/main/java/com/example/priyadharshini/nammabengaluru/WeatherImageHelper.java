@@ -13,7 +13,11 @@ import java.net.URL;
 /**
  * Created by priya.dharshini on 28/05/16.
  */
-public class GetWeatherImageHelper extends AsyncTask<String, String, Bitmap> {
+
+/**
+ * This class helps to download weather image and return the image as bitmap.
+ */
+public class WeatherImageHelper extends AsyncTask<String, String, Bitmap> {
 
     @Override
     protected Bitmap doInBackground(String... src) {
@@ -24,11 +28,11 @@ public class GetWeatherImageHelper extends AsyncTask<String, String, Bitmap> {
             connection.connect();
             InputStream input = connection.getInputStream();
             Bitmap myBitmap = BitmapFactory.decodeStream(input);
-            Log.e("Bitmap","returned");
+            Log.e("Bitmap", "returned");
             return myBitmap;
         } catch (IOException e) {
             e.printStackTrace();
-            Log.e("Exception",e.getMessage());
+            Log.e("Exception", e.getMessage());
             return null;
         }
     }

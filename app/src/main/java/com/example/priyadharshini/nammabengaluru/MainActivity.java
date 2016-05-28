@@ -15,6 +15,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * main menu in an array
+     */
     String[] menuArray = {"Places To Visit", "Hotels", "Weather", "Restaurants", "Map"};
 
     @Override
@@ -29,28 +32,33 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
-                String o = (String)listView.getItemAtPosition(position);
+                String o = (String) listView.getItemAtPosition(position);
                 performAction(o);
             }
         });
 
     }
+
+    /**
+     * This method opens the required activity according to the item selected in the main activity
+     * @param item
+     */
     public void performAction(String item) {
 
         switch (item) {
-            case "Places To Visit" :
+            case "Places To Visit":
                 Intent placesToVisit = new Intent(MainActivity.this, PlacesToVisit.class);
                 this.startActivity(placesToVisit);
                 break;
-            case "Weather" :
+            case "Weather":
                 Intent weather = new Intent(MainActivity.this, Weather.class);
                 this.startActivity(weather);
                 break;
-            case "Restaurants" :
+            case "Restaurants":
                 Intent restaurant = new Intent(MainActivity.this, Restaurants.class);
                 this.startActivity(restaurant);
                 break;
-            case "Map" :
+            case "Map":
                 Intent map = new Intent(MainActivity.this, MapsActivity.class);
                 Bundle b = new Bundle();
                 b.putDouble("lat", 12.9538477);
