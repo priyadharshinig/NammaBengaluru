@@ -1,5 +1,12 @@
 # NammaBengaluru
-This app is built for users who are new to Bangalore.
+This app is built for users who are new to Bangalore. 
+
+This app provides 
+-> Map of Bengaluru to the user 
+-> Idea of good places to visit with the location on the map
+-> Current Weather of Bengaluru
+-> Restaurants
+-> Hotels
 
 Setup instructions
 
